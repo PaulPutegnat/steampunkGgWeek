@@ -2,7 +2,6 @@
 
 public class ControlerManager
 {
-    public const int NB_INPUTS = 5; 
+    public const int NB_INPUTS = 3; 
 
-    
 }
