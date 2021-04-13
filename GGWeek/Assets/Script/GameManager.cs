@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    private InputEnum[] currentInstuctionInputs;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        InputEnum[] inputs;
+        
 
-        inputs = SequenceGenerator.Generate(5);
-
-        for (int i = 0; i < 5; i++)
-        {
-            print(inputs[i]);
-        }
     }
 
     // Update is called once per frame
@@ -22,4 +20,5 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
 }

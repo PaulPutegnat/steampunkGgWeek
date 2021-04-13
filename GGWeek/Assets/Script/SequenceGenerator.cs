@@ -10,12 +10,12 @@ public class SequenceGenerator
     {
         InputEnum[] inputs = new InputEnum[NbInputsToGenerate];
 
-        for (int i = 0; i < NbInputsToGenerate; i++)
+        for (int i = 0; i < NbInputsToGenerate; ++i)
         {
             int rand = Random.Range(0, ControlerManager.NB_INPUTS);
             InputEnum inputToAdd;
 
-            switch (rand)
+            switch (rand) //Choisie un input random 
             {
                 case 0:
                     inputToAdd = InputEnum.REDBUTTON;
@@ -31,9 +31,24 @@ public class SequenceGenerator
                     break;
             }
 
-            inputs[i] = inputToAdd;
+            
+            if (i > 1) //protection "out of index"
+            {
+                if (inputs[i - 1] != inputToAdd) //Verifie si l'input precedent n'est pas le même :
+                {
+                    inputs[i] = inputToAdd;
+                }
+                else
+                {
+                    --i;
+                }
+            }
+            else 
+            {
+                inputs[i] = inputToAdd;
+            }
+
         }
-        
         return inputs;
     }
     
