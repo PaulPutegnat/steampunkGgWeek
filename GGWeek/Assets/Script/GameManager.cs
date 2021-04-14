@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour
 {
 
     public int instructionNumbers = 6;
-    public GameObject instructtionPanelUI;
 
-    private InputEnum[] currentInstuctionInputs;
-    private InputEnum[] currentPlayerInputs;
+    [SerializeField] private InstructionPanelUI instructtionPanelUI;
+    [SerializeField] private PlayerPanelUI PlayerPanelUI;
+
+    [SerializeField] private InputEnum[] currentInstuctionInputs;
+    [SerializeField] private InputEnum[] currentPlayerInputs;
     private int currentPlayerIndex = 0;
 
 
@@ -18,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         currentPlayerInputs = new InputEnum[instructionNumbers];
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
-        instructtionPanelUI.GetComponent<instructionPanelUI>().UpdateInstructionUI();
+        instructtionPanelUI.UpdateInstructionUI();
     }
 
     // Update is called once per frame
@@ -29,7 +31,14 @@ public class GameManager : MonoBehaviour
             string keyPressed = Input.inputString;
             InputManagement(keyPressed);
         }
+
+        if (currentPlayerIndex >= instructionNumbers)
+        {
+            instructtionPanelUI.Clear();
+            PlayerPanelUI.Clear();
+        }
     }
+
     public InputEnum[] GetInstructionInputs()
     {
         return currentInstuctionInputs;
@@ -38,6 +47,11 @@ public class GameManager : MonoBehaviour
     public InputEnum[] GetPlayerInputs()
     {
         return currentPlayerInputs;
+    }
+
+    public int GetCurrentPlayerIndex()
+    {
+        return currentPlayerIndex;
     }
     
     private void InputManagement(string keyToProcess)
@@ -61,11 +75,14 @@ public class GameManager : MonoBehaviour
 
         if (inputToAdd != InputEnum.NULL && currentPlayerIndex < instructionNumbers)
         {
+            
             currentPlayerInputs[currentPlayerIndex] = inputToAdd;
+            PlayerPanelUI.UpdatePlayerUI();
 
             if (currentInstuctionInputs[currentPlayerIndex] != currentPlayerInputs[currentPlayerIndex])
             {
                 print("Erreur");
+                PlayerPanelUI.Clear();
             }
             else
             {
