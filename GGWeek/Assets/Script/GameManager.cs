@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public int instructionNumbers = 5;
+    public int instructionNumbers = 6;
     public GameObject instructtionPanelUI;
 
     private InputEnum[] currentInstuctionInputs;

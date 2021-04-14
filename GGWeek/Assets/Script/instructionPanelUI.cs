@@ -28,10 +28,11 @@ public class instructionPanelUI : MonoBehaviour
         {
             InputEnum currentInstructionInput = gameManager.GetInstructionInputs()[i];
 
-            Vector3 position = Vector3.zero;
-            position.x =  (transform.position.x - 3) + (1.2f * i);
-            position.y =  transform.position.y;
-            position.z =  1;
+            Vector3 position = transform.TransformPoint(transform.position);
+            print(((-2.0f * position.x) / gameManager.instructionNumbers) / 2.0f);
+            position.x = position.x + (((-2.0f * position.x) / gameManager.instructionNumbers) / 2.0f) + (((-2.0f * position.x) / gameManager.instructionNumbers) * i);
+            position.z = 1;
+
 
             switch (currentInstructionInput)
             {
