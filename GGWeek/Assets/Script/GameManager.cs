@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public int instructionNumbers = 5;
+    public GameObject instructtionPanelUI;
 
     private InputEnum[] currentInstuctionInputs;
     private InputEnum[] currentPlayerInputs;
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     {
         currentPlayerInputs = new InputEnum[instructionNumbers];
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
+        instructtionPanelUI.GetComponent<instructionPanelUI>().UpdateInstructionUI();
     }
 
     // Update is called once per frame
@@ -27,6 +29,15 @@ public class GameManager : MonoBehaviour
             string keyPressed = Input.inputString;
             InputManagement(keyPressed);
         }
+    }
+    public InputEnum[] GetInstructionInputs()
+    {
+        return currentInstuctionInputs;
+    }
+    
+    public InputEnum[] GetPlayerInputs()
+    {
+        return currentPlayerInputs;
     }
     
     private void InputManagement(string keyToProcess)
