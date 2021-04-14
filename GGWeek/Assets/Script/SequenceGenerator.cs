@@ -27,7 +27,7 @@ public class SequenceGenerator
                     inputToAdd = InputEnum.GREENBUTTON;
                     break;
                 default:
-                    inputToAdd = InputEnum.REDBUTTON;
+                    inputToAdd = InputEnum.NULL;
                     break;
             }
 
@@ -43,7 +43,7 @@ public class SequenceGenerator
                     --i;
                 }
             }
-            else 
+            else
             {
                 inputs[i] = inputToAdd;
             }
