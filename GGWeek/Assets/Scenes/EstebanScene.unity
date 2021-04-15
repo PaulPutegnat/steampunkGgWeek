@@ -473,9 +473,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
+      propertyPath: redButton
+      value: 
+      objectReference: {fileID: 2339701963612161351, guid: 1219335ac2440164f9bc410b4190d69d,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: blueButton
+      value: 
+      objectReference: {fileID: 6169289270298280054, guid: 9e57c96e40ab1bd45a59e45c93c62e10,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1047191436}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: greenButton
+      value: 
+      objectReference: {fileID: 6774139840299622465, guid: 467e26c49dc9bed4784fe43a8c3c7a18,
+        type: 3}
     - target: {fileID: 7342664935459783387, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
       propertyPath: m_Camera
