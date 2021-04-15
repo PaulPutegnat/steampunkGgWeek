@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour {
     
     public void LoadGameScene() {
-        SceneManager.LoadScene("PaulScene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void LoadMenuScene()

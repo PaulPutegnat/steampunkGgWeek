@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
 {
     public int instructionNumbers = 6;
 
-    [SerializeField] private InstructionPanelUI instructtionPanelUI;
+    [SerializeField] private InstructionPanelUI instructionPanelUI;
     [SerializeField] private PlayerPanelUI PlayerPanelUI;
+    [SerializeField] private Health health;
 
     [SerializeField] private InputEnum[] currentInstuctionInputs;
     [SerializeField] private InputEnum[] currentPlayerInputs;
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         currentPlayerInputs = new InputEnum[instructionNumbers];
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
-        instructtionPanelUI.UpdateInstructionUI();
+        instructionPanelUI.UpdateInstructionUI();
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayerIndex >= instructionNumbers)
         {
-            instructtionPanelUI.Clear();
+            instructionPanelUI.Clear();
             PlayerPanelUI.Clear();
         }
     }
@@ -109,6 +110,7 @@ public class GameManager : MonoBehaviour
             if (currentInstuctionInputs[currentPlayerIndex] != currentPlayerInputs[currentPlayerIndex])
             {
                 print("Erreur");
+                health.currentLife -= health.currentLife - 1;
                 //PlayerPanelUI.Clear();
             }
             else
