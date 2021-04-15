@@ -38,13 +38,13 @@ public class InstructionPanelUI : MonoBehaviour
 
             switch (currentInstructionInput)
             {
-                case InputEnum.REDBUTTON:
+                case InputEnum.BUTTON_1:
                     gameObject = Instantiate(redButton, position, transform.rotation);
                     break;
-                case InputEnum.BLUEBUTTON:
+                case InputEnum.BUTTON_2:
                     gameObject = Instantiate(blueButton, position, transform.rotation);
                     break;
-                case InputEnum.GREENBUTTON:
+                case InputEnum.BUTTON_3:
                     gameObject = Instantiate(greenButton, position, transform.rotation);
                     break;
                 default:

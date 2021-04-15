@@ -37,19 +37,19 @@ public class PlayerPanelUI : MonoBehaviour
 
         switch (currentInstructionInput)
         {
-            case InputEnum.REDBUTTON:
+            case InputEnum.BUTTON_1:
                 gameObject = Instantiate(redButton, position, transform.rotation);
                 break;
-            case InputEnum.BLUEBUTTON:
+            case InputEnum.BUTTON_2:
                 gameObject = Instantiate(blueButton, position, transform.rotation);
                 break;
-            case InputEnum.GREENBUTTON:
+            case InputEnum.BUTTON_3:
                 gameObject = Instantiate(greenButton, position, transform.rotation);
                 break;
             default:
                 break;
         }
-
+        gameObject.transform.localScale = new Vector3(0.7f, 0.7f, 1f);
         gameObjects.Add(gameObject);
     }
 

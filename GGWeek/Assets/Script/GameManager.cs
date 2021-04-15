@@ -60,13 +60,13 @@ public class GameManager : MonoBehaviour
         switch (keyToProcess) //Trouve l'input corespondent 
         {
             case "q":
-                inputToAdd = InputEnum.REDBUTTON;
+                inputToAdd = InputEnum.BUTTON_1;
                 break;            
             case "s":
-                inputToAdd = InputEnum.BLUEBUTTON;
+                inputToAdd = InputEnum.BUTTON_2;
                 break;            
             case "d":
-                inputToAdd = InputEnum.GREENBUTTON;
+                inputToAdd = InputEnum.BUTTON_3;
                 break;
             default:
                 inputToAdd = InputEnum.NULL;

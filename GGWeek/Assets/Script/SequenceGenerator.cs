@@ -43,13 +43,13 @@ public class SequenceGenerator
         switch (rand) 
         {
             case 0:
-                randInput = InputEnum.REDBUTTON;
+                randInput = InputEnum.BUTTON_1;
                 break;
             case 1:
-                randInput = InputEnum.BLUEBUTTON;
+                randInput = InputEnum.BUTTON_2;
                 break;
             case 2:
-                randInput = InputEnum.GREENBUTTON;
+                randInput = InputEnum.BUTTON_3;
                 break;
             default:
                 randInput = InputEnum.NULL;
