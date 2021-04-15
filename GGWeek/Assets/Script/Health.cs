@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
     public GameObject gameOver;
 
     void Start() {
+        Time.timeScale = 1;
         gameOver.SetActive(false);
         neverLost = true;
     }
