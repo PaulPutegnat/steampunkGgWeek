@@ -51,6 +51,33 @@ public class SequenceGenerator
             case 2:
                 randInput = InputEnum.BUTTON_3;
                 break;
+            case 3:
+                randInput = InputEnum.SLIDER_1;
+                break;
+            case 4:
+                randInput = InputEnum.SLIDER_2;
+                break;
+            case 5:
+                randInput = InputEnum.GEAR_1;
+                break;
+            case 6:
+                randInput = InputEnum.GEAR_2;
+                break;
+            case 7:
+                randInput = InputEnum.GEAR_3;
+                break;
+            case 8:
+                randInput = InputEnum.JOYSTICK_UP;
+                break;
+            case 9:
+                randInput = InputEnum.JOYSTICK_DOWN;
+                break;
+            case 10:
+                randInput = InputEnum.JOYSTICK_RIGHT;
+                break;
+            case 11:
+                randInput = InputEnum.JOYSTICK_LEFT;
+                break;
             default:
                 randInput = InputEnum.NULL;
                 break;

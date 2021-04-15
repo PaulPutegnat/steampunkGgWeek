@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         if (Input.anyKeyDown)
         {
             string keyPressed = Input.inputString;
+            //print(keyPressed);
             InputManagement(keyPressed);
         }
 
@@ -67,6 +68,33 @@ public class GameManager : MonoBehaviour
                 break;            
             case "t":
                 inputToAdd = InputEnum.BUTTON_3;
+                break;
+            case "y":
+                inputToAdd = InputEnum.SLIDER_1;
+                break;
+            case "u":
+                inputToAdd = InputEnum.SLIDER_2;
+                break;
+            case "i":
+                inputToAdd = InputEnum.GEAR_1;
+                break;
+            case "o":
+                inputToAdd = InputEnum.GEAR_2;
+                break;
+            case "p":
+                inputToAdd = InputEnum.GEAR_3;
+                break;
+            case "5":
+                inputToAdd = InputEnum.JOYSTICK_UP;
+                break;
+            case "2":
+                inputToAdd = InputEnum.JOYSTICK_DOWN;
+                break;
+            case "3":
+                inputToAdd = InputEnum.JOYSTICK_RIGHT;
+                break;
+            case "1":
+                inputToAdd = InputEnum.JOYSTICK_LEFT;
                 break;
             default:
                 inputToAdd = InputEnum.NULL;

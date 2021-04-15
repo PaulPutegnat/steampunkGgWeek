@@ -315,6 +315,54 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
+      propertyPath: gear_1
+      value: 
+      objectReference: {fileID: 6892894832312310721, guid: e3cbdf4577e5337478dd4ccc13936057,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: gear_2
+      value: 
+      objectReference: {fileID: 6918455509865670144, guid: a2decb84cf53f1244b447e5a4554336a,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: gear_3
+      value: 
+      objectReference: {fileID: 1193082520306251945, guid: 6a0261fb5dfda974c90ce1ced5c06869,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_1
+      value: 
+      objectReference: {fileID: 2339701963612161351, guid: 1219335ac2440164f9bc410b4190d69d,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_2
+      value: 
+      objectReference: {fileID: 6169289270298280054, guid: 9e57c96e40ab1bd45a59e45c93c62e10,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_3
+      value: 
+      objectReference: {fileID: 6774139840299622465, guid: 467e26c49dc9bed4784fe43a8c3c7a18,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: slider_1
+      value: 
+      objectReference: {fileID: 2036443999089006685, guid: 89b8fcb64366a6344b0ca6d398ecae33,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: slider_2
+      value: 
+      objectReference: {fileID: 4624571236332771928, guid: 3075b3723c6a51043b2e2e4ecfbc7a27,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
       propertyPath: redButton
       value: 
       objectReference: {fileID: 2339701963612161351, guid: 1219335ac2440164f9bc410b4190d69d,
@@ -335,6 +383,30 @@ PrefabInstance:
       propertyPath: greenButton
       value: 
       objectReference: {fileID: 6774139840299622465, guid: 467e26c49dc9bed4784fe43a8c3c7a18,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_up
+      value: 
+      objectReference: {fileID: 3625066706696913179, guid: ed3b3d724f617d2478d11274894df46a,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_down
+      value: 
+      objectReference: {fileID: 354794844681864673, guid: 48dcfe4b8d8daad4c8ec25a58c0fd265,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_left
+      value: 
+      objectReference: {fileID: 9045237039752319095, guid: 6d86069b05c648a419bf920feb957036,
+        type: 3}
+    - target: {fileID: 524080052801942397, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_right
+      value: 
+      objectReference: {fileID: 8479817169135798135, guid: b61c59eb885c6ba40947e80d79155f60,
         type: 3}
     - target: {fileID: 2045265374767330561, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
@@ -473,6 +545,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
+      propertyPath: gear_1
+      value: 
+      objectReference: {fileID: 6892894832312310721, guid: e3cbdf4577e5337478dd4ccc13936057,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: gear_2
+      value: 
+      objectReference: {fileID: 6918455509865670144, guid: a2decb84cf53f1244b447e5a4554336a,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: gear_3
+      value: 
+      objectReference: {fileID: 1193082520306251945, guid: 6a0261fb5dfda974c90ce1ced5c06869,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_1
+      value: 
+      objectReference: {fileID: 2339701963612161351, guid: 1219335ac2440164f9bc410b4190d69d,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_2
+      value: 
+      objectReference: {fileID: 6169289270298280054, guid: 9e57c96e40ab1bd45a59e45c93c62e10,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: button_3
+      value: 
+      objectReference: {fileID: 6774139840299622465, guid: 467e26c49dc9bed4784fe43a8c3c7a18,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: slider_1
+      value: 
+      objectReference: {fileID: 2036443999089006685, guid: 89b8fcb64366a6344b0ca6d398ecae33,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: slider_2
+      value: 
+      objectReference: {fileID: 4624571236332771928, guid: 3075b3723c6a51043b2e2e4ecfbc7a27,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
       propertyPath: redButton
       value: 
       objectReference: {fileID: 2339701963612161351, guid: 1219335ac2440164f9bc410b4190d69d,
@@ -493,6 +613,30 @@ PrefabInstance:
       propertyPath: greenButton
       value: 
       objectReference: {fileID: 6774139840299622465, guid: 467e26c49dc9bed4784fe43a8c3c7a18,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_up
+      value: 
+      objectReference: {fileID: 3625066706696913179, guid: ed3b3d724f617d2478d11274894df46a,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_down
+      value: 
+      objectReference: {fileID: 354794844681864673, guid: 48dcfe4b8d8daad4c8ec25a58c0fd265,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_left
+      value: 
+      objectReference: {fileID: 9045237039752319095, guid: 6d86069b05c648a419bf920feb957036,
+        type: 3}
+    - target: {fileID: 5423629200550380043, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: joystick_right
+      value: 
+      objectReference: {fileID: 8479817169135798135, guid: b61c59eb885c6ba40947e80d79155f60,
         type: 3}
     - target: {fileID: 7342664935459783387, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
