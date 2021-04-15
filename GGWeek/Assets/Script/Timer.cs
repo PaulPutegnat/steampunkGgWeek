@@ -8,11 +8,15 @@ public class Timer : MonoBehaviour
     public GameObject textDisplay;
     public int timeLeft = 30;
     public bool takingAway = false;
+    public bool neverWon;
+
+    [SerializeField] private Health health;
 
     //Afficher le timer au lancement de la partie
     void Start()
     {
-        textDisplay.GetComponent<Text>().text = "00:" + timeLeft;
+        neverWon = true;
+        textDisplay.GetComponent<Text>().text = "02:00";
     }
 
     //Modifier le timer
@@ -21,6 +25,10 @@ public class Timer : MonoBehaviour
         if(takingAway == false && timeLeft > 0) {
             StartCoroutine(ReduceTimer());
         }
+        if (health.currentLife >= 1 && timeLeft == 0) {
+            Victory();
+            neverWon = false;
+        }
     }
 
     IEnumerator ReduceTimer()
@@ -28,13 +36,24 @@ public class Timer : MonoBehaviour
         takingAway = true;
         yield return new WaitForSeconds(1);
         timeLeft -= 1;
-        //Rajouter un zéro si il reste moins de 10 secondes
+        //Correction d'affichage
+        if (timeLeft >= 60) {
+            textDisplay.GetComponent<Text>().text = "01:" + (timeLeft - 60);
+        }
+        if (timeLeft >= 60 && timeLeft < 70)
+        {
+            textDisplay.GetComponent<Text>().text = "01:0" + (timeLeft - 60);
+        }
+        if (timeLeft < 60) {
+            textDisplay.GetComponent<Text>().text = "00:" + timeLeft;
+        }
         if (timeLeft < 10) {
             textDisplay.GetComponent<Text>().text = "00:0" + timeLeft;
-        } else {
-            textDisplay.GetComponent<Text>().text = "00:" + timeLeft;
         }
         takingAway = false;
     }
 
+    void Victory() { 
+        Debug.Log("Victoire!");
+    }
 }

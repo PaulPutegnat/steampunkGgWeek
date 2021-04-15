@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public int instructionNumbers = 6;
 
     [SerializeField] private InstructionPanelUI instructtionPanelUI;
@@ -92,5 +91,4 @@ public class GameManager : MonoBehaviour
             ++currentPlayerIndex;
         }
     }
-
 }

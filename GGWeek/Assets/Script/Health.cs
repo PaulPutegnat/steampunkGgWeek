@@ -12,6 +12,16 @@ public class Health : MonoBehaviour
     public Sprite fullLife;
     public Sprite emptyLife;
 
+    public bool hasLost = false;
+    public bool neverLost;
+
+    public GameObject gameOver;
+
+    void Start() {
+        gameOver.SetActive(false);
+        neverLost = true;
+    }
+
     void Update()
     {
         //Set la vie actuelle au nombre max de vies
@@ -39,6 +49,12 @@ public class Health : MonoBehaviour
                 lifes[i].enabled = false;
             }
         }
+
+        if(currentLife == 0 && neverLost == true) {
+            Lost(true);
+            Debug.Log("Lost!");
+            neverLost = false;
+        }
     }
 
     //Fonction pour enlever de la vie
@@ -47,4 +63,13 @@ public class Health : MonoBehaviour
         currentLife -= damage;
         SoundManager.PlaySound("missed");
     }
+
+    void Lost(bool hasLost) {
+        if (hasLost) {
+            Time.timeScale = 0;
+            hasLost = true;
+            gameOver.SetActive(true);
+        }
+    }
+
 }
