@@ -6,50 +6,57 @@ public class SequenceGenerator
     {
     }
 
-    public static InputEnum[] Generate(int NbInputsToGenerate)
+    /// <summary>
+    /// Génere une suite d'inputs aléatoire.
+    /// </summary>
+    public static InputEnum[] Generate(int length)
     {
-        InputEnum[] inputs = new InputEnum[NbInputsToGenerate];
+        InputEnum[] inputs = new InputEnum[length];
 
-        for (int i = 0; i < NbInputsToGenerate; ++i)
+        for (int i = 0; i < length; ++i)
         {
-            int rand = Random.Range(0, ControlerManager.NB_INPUTS);
-            InputEnum inputToAdd;
-
-            switch (rand) //Choisie un input random 
-            {
-                case 0:
-                    inputToAdd = InputEnum.REDBUTTON;
-                    break;
-                case 1:
-                    inputToAdd = InputEnum.BLUEBUTTON;
-                    break;
-                case 2:
-                    inputToAdd = InputEnum.GREENBUTTON;
-                    break;
-                default:
-                    inputToAdd = InputEnum.NULL;
-                    break;
-            }
-
+            InputEnum inputToAdd = RandomInput(); //assignation de securité
             
-            if (i > 1) //protection "out of index"
+            if (i == 0) //premier index donc pas de soucie de doublon
             {
-                if (inputs[i - 1] != inputToAdd) //Verifie si l'input precedent n'est pas le même :
-                {
-                    inputs[i] = inputToAdd;
-                }
-                else
-                {
-                    --i;
-                }
+                inputToAdd = RandomInput();
             }
             else
             {
-                inputs[i] = inputToAdd;
-            }
-
+                while (inputToAdd == inputs[i -1]) //change d'input si le precedent est le même
+                {
+                    inputToAdd = RandomInput();
+                }
+            }          
+            inputs[i] = inputToAdd;
         }
         return inputs;
+    }
+
+    /// <summary>
+    /// Choisie un Input aléatoire.
+    /// </summary>
+    private static InputEnum RandomInput()
+    {
+        int rand = Random.Range(0, ControlerManager.NB_INPUTS);
+        InputEnum randInput;
+        switch (rand) 
+        {
+            case 0:
+                randInput = InputEnum.REDBUTTON;
+                break;
+            case 1:
+                randInput = InputEnum.BLUEBUTTON;
+                break;
+            case 2:
+                randInput = InputEnum.GREENBUTTON;
+                break;
+            default:
+                randInput = InputEnum.NULL;
+                break;
+        }
+
+        return randInput;
     }
     
 }
