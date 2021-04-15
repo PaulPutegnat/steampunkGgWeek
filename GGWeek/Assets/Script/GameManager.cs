@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InputEnum[] currentPlayerInputs;
     private int currentPlayerIndex = 0;
 
+    public int robotFinish;
+    public int goodInputSerie;
+
    
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,8 @@ public class GameManager : MonoBehaviour
         currentPlayerInputs = new InputEnum[instructionNumbers];
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
         instructionPanelUI.UpdateInstructionUI();
+        goodInputSerie = 0;
+        robotFinish = 0;
     }
 
     // Update is called once per frame
@@ -33,11 +38,12 @@ public class GameManager : MonoBehaviour
             InputManagement(keyPressed);
         }
 
-        if (currentPlayerIndex >= instructionNumbers)
-        {
-            instructionPanelUI.Clear();
+        if(robotFinish == 1) {
+            health.gameOver.SetActive(true);
             PlayerPanelUI.Clear();
+            instructionPanelUI.Clear();
         }
+        Debug.Log(goodInputSerie);
     }
 
     public InputEnum[] GetInstructionInputs()
@@ -101,7 +107,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (inputToAdd != InputEnum.NULL && currentPlayerIndex < instructionNumbers)
+        if (inputToAdd != InputEnum.NULL)
         {
             
             currentPlayerInputs[currentPlayerIndex] = inputToAdd;
@@ -110,15 +116,27 @@ public class GameManager : MonoBehaviour
             if (currentInstuctionInputs[currentPlayerIndex] != currentPlayerInputs[currentPlayerIndex])
             {
                 print("Erreur");
-                health.currentLife -= health.currentLife - 1;
-                //PlayerPanelUI.Clear();
+                goodInputSerie = 0;
+                health.TakeDamage(1);
+                currentPlayerIndex = 0;
+                PlayerPanelUI.Clear();
+                instructionPanelUI.Clear();
+                NewInstructions();
             }
             else
             {
                 print("Bon");
+                goodInputSerie = goodInputSerie + 1;
+                ++currentPlayerIndex;
+                if(goodInputSerie == instructionNumbers) {
+                    robotFinish++;
+                }
             }
-
-            ++currentPlayerIndex;
         }
+    }
+
+    void NewInstructions() {
+        currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
+        instructionPanelUI.UpdateInstructionUI();
     }
 }

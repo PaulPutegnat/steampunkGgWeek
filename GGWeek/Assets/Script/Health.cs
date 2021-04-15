@@ -30,10 +30,10 @@ public class Health : MonoBehaviour
             currentLife = numOfLifes;
         }
 
-        //Pour tester la Fonction TakeDamage
+        /*Pour tester la Fonction TakeDamage
         if (Input.GetKeyDown(KeyCode.P)) {
             TakeDamage(1);
-        }
+        } */
 
         //Affichage du bon sprite en fonction de la vie actuelle
         for (int i = 0; i < lifes.Length; i++)
@@ -59,7 +59,7 @@ public class Health : MonoBehaviour
     }
 
     //Fonction pour enlever de la vie
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentLife -= damage;
         SoundManager.PlaySound("missed");
