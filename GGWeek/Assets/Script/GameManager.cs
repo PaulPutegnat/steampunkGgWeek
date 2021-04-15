@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InputEnum[] currentPlayerInputs;
     private int currentPlayerIndex = 0;
 
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -59,13 +59,13 @@ public class GameManager : MonoBehaviour
         InputEnum inputToAdd;
         switch (keyToProcess) //Trouve l'input corespondent 
         {
-            case "q":
+            case "e":
                 inputToAdd = InputEnum.BUTTON_1;
                 break;            
-            case "s":
+            case "r":
                 inputToAdd = InputEnum.BUTTON_2;
                 break;            
-            case "d":
+            case "t":
                 inputToAdd = InputEnum.BUTTON_3;
                 break;
             default:
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             if (currentInstuctionInputs[currentPlayerIndex] != currentPlayerInputs[currentPlayerIndex])
             {
                 print("Erreur");
-                PlayerPanelUI.Clear();
+                //PlayerPanelUI.Clear();
             }
             else
             {
