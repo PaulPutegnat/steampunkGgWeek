@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InputEnum[] currentPlayerInputs;
     private int currentPlayerIndex = 0;
 
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         if (Input.anyKeyDown)
         {
             string keyPressed = Input.inputString;
+            //print(keyPressed);
             InputManagement(keyPressed);
         }
 
@@ -58,14 +59,41 @@ public class GameManager : MonoBehaviour
         InputEnum inputToAdd;
         switch (keyToProcess) //Trouve l'input corespondent 
         {
-            case "q":
-                inputToAdd = InputEnum.REDBUTTON;
+            case "e":
+                inputToAdd = InputEnum.BUTTON_1;
                 break;            
-            case "s":
-                inputToAdd = InputEnum.BLUEBUTTON;
+            case "r":
+                inputToAdd = InputEnum.BUTTON_2;
                 break;            
-            case "d":
-                inputToAdd = InputEnum.GREENBUTTON;
+            case "t":
+                inputToAdd = InputEnum.BUTTON_3;
+                break;
+            case "y":
+                inputToAdd = InputEnum.SLIDER_1;
+                break;
+            case "u":
+                inputToAdd = InputEnum.SLIDER_2;
+                break;
+            case "i":
+                inputToAdd = InputEnum.GEAR_1;
+                break;
+            case "o":
+                inputToAdd = InputEnum.GEAR_2;
+                break;
+            case "p":
+                inputToAdd = InputEnum.GEAR_3;
+                break;
+            case "5":
+                inputToAdd = InputEnum.JOYSTICK_UP;
+                break;
+            case "2":
+                inputToAdd = InputEnum.JOYSTICK_DOWN;
+                break;
+            case "3":
+                inputToAdd = InputEnum.JOYSTICK_RIGHT;
+                break;
+            case "1":
+                inputToAdd = InputEnum.JOYSTICK_LEFT;
                 break;
             default:
                 inputToAdd = InputEnum.NULL;
@@ -81,7 +109,7 @@ public class GameManager : MonoBehaviour
             if (currentInstuctionInputs[currentPlayerIndex] != currentPlayerInputs[currentPlayerIndex])
             {
                 print("Erreur");
-                PlayerPanelUI.Clear();
+                //PlayerPanelUI.Clear();
             }
             else
             {
