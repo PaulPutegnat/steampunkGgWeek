@@ -373,31 +373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 684427941, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1660968639}
-    - target: {fileID: 684427941, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadGameScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 829889979, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1660968639}
-    - target: {fileID: 829889979, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMenuScene
-      objectReference: {fileID: 0}
     - target: {fileID: 1381852904, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1135167558}
-    - target: {fileID: 1216716505068474223, guid: 45cc1c74a431f884a87c599c535fe934,
-        type: 3}
-      propertyPath: m_Name
-      value: LifePanel
-      objectReference: {fileID: 0}
     - target: {fileID: 2045265374767330561, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
       propertyPath: m_Name
@@ -554,17 +533,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a950b056431ceb479dc3da34c957cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1660968639 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 561801494827986264, guid: 45cc1c74a431f884a87c599c535fe934,
-    type: 3}
-  m_PrefabInstance: {fileID: 1660968635}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9002ac922fec7c458711900c21f4f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
