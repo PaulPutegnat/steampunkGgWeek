@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private InstructionPanelUI instructionPanelUI;
     [SerializeField] private PlayerPanelUI PlayerPanelUI;
     [SerializeField] private Health health;
+    [SerializeField] private Text textRobots;
+    [SerializeField] private Text textJours;
 
     [SerializeField] private InputEnum[] currentInstuctionInputs;
     [SerializeField] private InputEnum[] currentPlayerInputs;
@@ -16,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public int robotFinish;
     public int goodInputSerie;
+    public int robotToDo;
+    public int day = 1;
 
    
     // Start is called before the first frame update
@@ -26,6 +31,9 @@ public class GameManager : MonoBehaviour
         instructionPanelUI.UpdateInstructionUI();
         goodInputSerie = 0;
         robotFinish = 0;
+        robotToDo = 7;
+        textJours.text = day.ToString();
+        textRobots.text = robotToDo.ToString();
     }
 
     // Update is called once per frame
@@ -38,10 +46,9 @@ public class GameManager : MonoBehaviour
             InputManagement(keyPressed);
         }
 
-        if(robotFinish == 1) {
-            health.gameOver.SetActive(true);
-            PlayerPanelUI.Clear();
-            instructionPanelUI.Clear();
+        if(robotFinish == robotToDo) {
+            //Victoire
+            print("Victoire");
         }
         Debug.Log(goodInputSerie);
     }
@@ -132,8 +139,15 @@ public class GameManager : MonoBehaviour
                 print("Bon");
                 goodInputSerie = goodInputSerie + 1;
                 ++currentPlayerIndex;
+
                 if(goodInputSerie == instructionNumbers) {
                     robotFinish++;
+
+                    PlayerPanelUI.Clear();
+                    instructionPanelUI.Clear();
+                    currentPlayerIndex = 0;
+                    goodInputSerie = 0;
+                    NewInstructions();
                 }
             }
         }
