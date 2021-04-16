@@ -133,6 +133,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c33e17aa1ee7d64d9457f58458416a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &195226826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 45933312620381341, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &301976107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145,6 +157,16 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 178318333}
+    - target: {fileID: 3190113380687895869, guid: f311e1f77c7d333428693f22246b2d37,
+        type: 3}
+      propertyPath: textJours
+      value: 
+      objectReference: {fileID: 195226826}
+    - target: {fileID: 3190113380687895869, guid: f311e1f77c7d333428693f22246b2d37,
+        type: 3}
+      propertyPath: textRobots
+      value: 
+      objectReference: {fileID: 602566794}
     - target: {fileID: 3190113380687895869, guid: f311e1f77c7d333428693f22246b2d37,
         type: 3}
       propertyPath: PlayerPanelUI
@@ -456,6 +478,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &602566794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1083742541149002105, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &740323493
 GameObject:
   m_ObjectHideFlags: 0
