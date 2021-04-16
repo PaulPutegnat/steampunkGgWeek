@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         instructionPanelUI.UpdateInstructionUI();
         goodInputSerie = 0;
         robotFinish = 0;
-        robotToDo = 1;
+        robotToDo = 7;
         textJours.text = day.ToString();
         textRobots.text = robotToDo.ToString();
     }
