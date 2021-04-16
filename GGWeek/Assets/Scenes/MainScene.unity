@@ -409,6 +409,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: Bg_input
+      value: 
+      objectReference: {fileID: 1862835777}
+    - target: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: lifePanel
+      value: 
+      objectReference: {fileID: 1761133367}
+    - target: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: timerPanel
+      value: 
+      objectReference: {fileID: 1982192646}
+    - target: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: currentLife
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1381852904, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
       propertyPath: gameManager
       value: 
@@ -535,3 +551,21 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+--- !u!1 &1761133367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216716505068474223, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1862835777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 285838082, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982192646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8674967562117590201, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}

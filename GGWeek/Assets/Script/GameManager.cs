@@ -122,6 +122,10 @@ public class GameManager : MonoBehaviour
                 PlayerPanelUI.Clear();
                 instructionPanelUI.Clear();
                 NewInstructions();
+                if (health.currentLife == 0) {
+                    PlayerPanelUI.Clear();
+                    instructionPanelUI.Clear();
+                }
             }
             else
             {
