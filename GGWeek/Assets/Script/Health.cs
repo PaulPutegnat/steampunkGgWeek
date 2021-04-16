@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
     public bool hasLost = false;
     public bool neverLost;
 
+    public GameObject victoryPanel;
     public GameObject gameOver;
     public GameObject Bg_input;
     public GameObject timerPanel;
@@ -23,6 +24,7 @@ public class Health : MonoBehaviour
 
     void Start() {
         Time.timeScale = 1;
+        victoryPanel.SetActive(false);
         gameOver.SetActive(false);
         neverLost = true;
     }

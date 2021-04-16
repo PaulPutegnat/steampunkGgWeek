@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         instructionPanelUI.UpdateInstructionUI();
         goodInputSerie = 0;
         robotFinish = 0;
-        robotToDo = 7;
+        robotToDo = 1;
         textJours.text = day.ToString();
         textRobots.text = robotToDo.ToString();
     }
@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         if(robotFinish == robotToDo) {
             //Victoire
             print("Victoire");
+            health.victoryPanel.SetActive(true);
+            instructionPanelUI.Clear();
         }
         Debug.Log(goodInputSerie);
     }
