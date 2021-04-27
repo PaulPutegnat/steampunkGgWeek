@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
         SoundManager.PlaySound("missed");
     }
 
-    void Lost(bool hasLost) {
+    public void Lost(bool hasLost) {
         if (hasLost) {
             Time.timeScale = 0;
             hasLost = true;

@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
-    
+
+    public GameManager gameManager;
+
     public void LoadGameScene() {
         SceneManager.LoadScene("MainScene");
     }
@@ -12,6 +14,12 @@ public class Menu : MonoBehaviour {
     public void LoadMenuScene()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void NextDay()
+    {
+        gameManager.NextDay();
+        this.gameObject.SetActive(false);
     }
 
     public void QuitGame() {

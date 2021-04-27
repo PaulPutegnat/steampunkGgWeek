@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,15 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        music.SetActive(true);
-        currentPlayerInputs = new InputEnum[instructionNumbers];
-        currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
-        instructionPanelUI.UpdateInstructionUI();
-        goodInputSerie = 0;
-        robotFinish = 0;
-        robotToDo = 7;
-        textJours.text = day.ToString();
-        textRobots.text = robotToDo.ToString();
+        Init();
     }
 
     // Update is called once per frame
@@ -49,14 +42,17 @@ public class GameManager : MonoBehaviour
             InputManagement(keyPressed);
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         if(robotFinish == robotToDo) {
             //Victoire
             print("Victoire");
-            health.victoryPanel.SetActive(true);
-            music.SetActive(false);
-            instructionPanelUI.Clear();
+            DayWin();
         }
-        Debug.Log(goodInputSerie);
+        //Debug.Log(goodInputSerie);
     }
 
     public InputEnum[] GetInstructionInputs()
@@ -73,7 +69,26 @@ public class GameManager : MonoBehaviour
     {
         return currentPlayerIndex;
     }
-    
+
+    private void Init()
+    {
+        music.SetActive(true);
+        currentPlayerInputs = new InputEnum[instructionNumbers];
+        currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
+        instructionPanelUI.UpdateInstructionUI();
+        goodInputSerie = 0;
+        robotFinish = 0;
+        robotToDo = 4 + day * 2;
+        textJours.text = day.ToString();
+        textRobots.text = robotToDo.ToString();
+    }
+    private void DayWin()
+    {
+        health.victoryPanel.SetActive(true);
+        music.SetActive(false);
+        instructionPanelUI.Clear();
+    }
+
     private void InputManagement(string keyToProcess)
     {
         InputEnum inputToAdd;
@@ -135,6 +150,7 @@ public class GameManager : MonoBehaviour
                 PlayerPanelUI.Clear();
                 instructionPanelUI.Clear();
                 NewInstructions();
+
                 if (health.currentLife == 0) {
                     PlayerPanelUI.Clear();
                     instructionPanelUI.Clear();
@@ -162,5 +178,17 @@ public class GameManager : MonoBehaviour
     void NewInstructions() {
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
         instructionPanelUI.UpdateInstructionUI();
+    }
+
+    public void NextDay()
+    {
+        ++day;
+        Init();
+    }
+
+    public void Lost()
+    {
+        PlayerPanelUI.Clear();
+        instructionPanelUI.Clear();
     }
 }

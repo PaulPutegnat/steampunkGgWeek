@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public int timeLeft = 30;
     public bool takingAway = false;
     public bool neverWon;
+    public GameManager gm;
 
     [SerializeField] private Health health;
 
@@ -55,5 +56,7 @@ public class Timer : MonoBehaviour
 
     void Victory() { 
         Debug.Log("Victoire!");
+        health.Lost(true);
+        gm.Lost();
     }
 }

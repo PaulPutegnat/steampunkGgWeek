@@ -575,7 +575,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 99945461, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: gameMng
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 684427941, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 829889978, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 34.000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200496083, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358027588, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -21.000008
+      objectReference: {fileID: 0}
     - target: {fileID: 1381852904, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 561801494827986264, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 325310721}
