@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Health health;
     [SerializeField] private Text textRobots;
     [SerializeField] private Text textJours;
+    [SerializeField] private Timer timer;
+
 
     [SerializeField] private InputEnum[] currentInstuctionInputs;
     [SerializeField] private InputEnum[] currentPlayerInputs;
@@ -81,6 +83,7 @@ public class GameManager : MonoBehaviour
         robotToDo = 4 + day * 2;
         textJours.text = day.ToString();
         textRobots.text = robotToDo.ToString();
+        timer.ResetTime();
     }
     private void DayWin()
     {

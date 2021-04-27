@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &115501469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1896016162017979410, guid: 45cc1c74a431f884a87c599c535fe934,
+    type: 3}
+  m_PrefabInstance: {fileID: 1690357955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fb55d8cc63bfb4bb9f2e37d66bf34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &178318333 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 178318333, guid: 45cc1c74a431f884a87c599c535fe934,
@@ -157,6 +169,11 @@ PrefabInstance:
       propertyPath: music
       value: 
       objectReference: {fileID: 847301620}
+    - target: {fileID: 3190113380687895869, guid: f311e1f77c7d333428693f22246b2d37,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 115501469}
     - target: {fileID: 3190113380687895869, guid: f311e1f77c7d333428693f22246b2d37,
         type: 3}
       propertyPath: health
@@ -608,6 +625,16 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 325310721}
+    - target: {fileID: 1896016162017979410, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 1896016162017979410, guid: 45cc1c74a431f884a87c599c535fe934,
+        type: 3}
+      propertyPath: timeLeft
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 2045265374767330561, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
       propertyPath: m_Name

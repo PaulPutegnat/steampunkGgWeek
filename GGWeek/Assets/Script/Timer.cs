@@ -54,6 +54,11 @@ public class Timer : MonoBehaviour
         takingAway = false;
     }
 
+    public void ResetTime()
+    {
+        timeLeft = 120;
+    }
+
     void Victory() { 
         Debug.Log("Victoire!");
         health.Lost(true);
