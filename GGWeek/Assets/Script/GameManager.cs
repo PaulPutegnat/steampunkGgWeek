@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour
     public int robotToDo;
     public int day = 1;
 
+    public GameObject music;
+
    
     // Start is called before the first frame update
     void Start()
     {
+        music.SetActive(true);
         currentPlayerInputs = new InputEnum[instructionNumbers];
         currentInstuctionInputs = SequenceGenerator.Generate(instructionNumbers);
         instructionPanelUI.UpdateInstructionUI();
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour
             //Victoire
             print("Victoire");
             health.victoryPanel.SetActive(true);
+            music.SetActive(false);
             instructionPanelUI.Clear();
         }
         Debug.Log(goodInputSerie);

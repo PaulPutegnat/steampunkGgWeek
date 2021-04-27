@@ -415,6 +415,7 @@ MonoBehaviour:
   Bg_input: {fileID: 285838082}
   timerPanel: {fileID: 8674967562117590201}
   lifePanel: {fileID: 1216716505068474223}
+  gameMng: {fileID: 0}
 --- !u!1 &285838082
 GameObject:
   m_ObjectHideFlags: 0

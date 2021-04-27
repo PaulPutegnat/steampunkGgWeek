@@ -21,6 +21,8 @@ public class Health : MonoBehaviour
     public GameObject timerPanel;
     public GameObject lifePanel;
 
+    [SerializeField] private GameManager gameMng;   
+
 
     void Start() {
         Time.timeScale = 1;
@@ -79,6 +81,7 @@ public class Health : MonoBehaviour
             Bg_input.SetActive(false);
             timerPanel.SetActive(false);
             lifePanel.SetActive(false);
+            gameMng.music.SetActive(false);
 }
     }
 
