@@ -10,12 +10,14 @@ public class Timer : MonoBehaviour
     public bool takingAway = false;
     public bool neverWon;
     public GameManager gm;
+    public GameObject late;
 
     [SerializeField] private Health health;
 
     //Afficher le timer au lancement de la partie
     void Start()
     {
+        late.SetActive(false);
         neverWon = true;
         textDisplay.GetComponent<Text>().text = "02:00";
     }
@@ -50,6 +52,10 @@ public class Timer : MonoBehaviour
         }
         if (timeLeft < 10) {
             textDisplay.GetComponent<Text>().text = "00:0" + timeLeft;
+        }
+        if (timeLeft < 20)
+        {
+            late.SetActive(true);
         }
         takingAway = false;
     }
