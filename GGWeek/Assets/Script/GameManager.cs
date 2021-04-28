@@ -87,7 +87,19 @@ public class GameManager : MonoBehaviour
     }
     private void DayWin()
     {
-        health.victoryPanel.SetActive(true);
+        if(health.currentLife == 2)
+        { 
+            health.victoryPanel1Error.SetActive(true);
+        }
+        if (health.currentLife == 3)
+        {
+            health.victoryPanel0Error.SetActive(true);
+        }
+        if (health.currentLife == 1)
+        {
+            health.victoryPanel2Error.SetActive(true);
+        }
+
         music.SetActive(false);
         instructionPanelUI.Clear();
     }

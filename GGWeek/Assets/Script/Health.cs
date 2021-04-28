@@ -15,7 +15,9 @@ public class Health : MonoBehaviour
     public bool hasLost = false;
     public bool neverLost;
 
-    public GameObject victoryPanel;
+    public GameObject victoryPanel1Error;
+    public GameObject victoryPanel0Error;
+    public GameObject victoryPanel2Error;
     public GameObject gameOver;
     public GameObject Bg_input;
     public GameObject timerPanel;
@@ -26,7 +28,9 @@ public class Health : MonoBehaviour
 
     void Start() {
         Time.timeScale = 1;
-        victoryPanel.SetActive(false);
+        victoryPanel1Error.SetActive(false);
+        victoryPanel0Error.SetActive(false);
+        victoryPanel2Error.SetActive(false);
         gameOver.SetActive(false);
         neverLost = true;
     }
@@ -70,7 +74,6 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentLife -= damage;
-        SoundManager.PlaySound("missed");
     }
 
     public void Lost(bool hasLost) {
