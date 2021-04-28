@@ -600,26 +600,36 @@ PrefabInstance:
       propertyPath: gameMng
       value: 
       objectReference: {fileID: 325310721}
-    - target: {fileID: 684427941, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadGameScene
-      objectReference: {fileID: 0}
     - target: {fileID: 829889978, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 34.000023
-      objectReference: {fileID: 0}
-    - target: {fileID: 1200496083, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextDay
+      value: 34.00006
       objectReference: {fileID: 0}
     - target: {fileID: 1358027588, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -21.000008
+      value: -21.000015
       objectReference: {fileID: 0}
     - target: {fileID: 1381852904, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 325310721}
+    - target: {fileID: 1563530034, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 1563530035, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d142e52693f2fb24bad97784f736027d,
+        type: 3}
+    - target: {fileID: 1568843885, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 325310721}
+    - target: {fileID: 1568843886, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 209276e45eccbdb46ab09d02bb5100ad,
+        type: 3}
     - target: {fileID: 561801494827986264, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
       propertyPath: gameManager
@@ -630,11 +640,6 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 325310721}
-    - target: {fileID: 1896016162017979410, guid: 45cc1c74a431f884a87c599c535fe934,
-        type: 3}
-      propertyPath: timeLeft
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 2045265374767330561, guid: 45cc1c74a431f884a87c599c535fe934,
         type: 3}
       propertyPath: m_Name
@@ -755,11 +760,5 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 8732625034021493694, guid: 45cc1c74a431f884a87c599c535fe934,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 550f74da145a6cc4baddd3547eed81c4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45cc1c74a431f884a87c599c535fe934, type: 3}
